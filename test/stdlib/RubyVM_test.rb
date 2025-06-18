@@ -1,5 +1,7 @@
 require_relative "test_helper"
 
+return unless defined?(RubyVM)
+
 class RubyVM::AbstractSyntaxTreeSingletonTest < Test::Unit::TestCase
   include TestHelper
 
