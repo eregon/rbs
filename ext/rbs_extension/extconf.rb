@@ -24,6 +24,8 @@ if ENV["TEST_NO_C23"]
   $CFLAGS << " -Werror -Wc2x-extensions"
 end
 
+have_func 'ruby_vm_at_exit'
+
 create_makefile 'rbs_extension'
 
 # Only generate compile_commands.json when compiling through Rake tasks

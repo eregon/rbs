@@ -465,5 +465,7 @@ void Init_rbs_extension(void) {
     const size_t num_uniquely_interned_strings = 26;
     rbs_constant_pool_init(RBS_GLOBAL_CONSTANT_POOL, num_uniquely_interned_strings);
 
+#ifdef HAVE_RUBY_VM_AT_EXIT
     ruby_vm_at_exit(Deinit_rbs_extension);
+#endif
 }
